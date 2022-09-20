@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body onload="startTime()">
+    
+    <section>
+        <div class="container">
+            <div class="window mx-auto showed" id="window">
+                <div class="title-bar">
+                  <div class="title-bar-text d-flex flex-row align-items-center"><img src="ico/JPG File.ico" alt="" width="16" height="16" class="d-inline-block align-text-top icon-button"> Me.jpeg</div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize" id="minimize" onclick="minimizeWindow('#window')"></button>
+                    <button aria-label="Maximize" id="maximize" onclick="maximizeWindow('window', 'maximize', 'restore')"></button>
+                    <button aria-label="Close" id="close"  onclick="closeWindow('#window', '#btn-taskbar-photo-me')"></button>
+                  </div>
+                </div>
+                <div class="window-body">
+                    <div class="text-center"><img class="mx-auto" id="photo" alt="..." src="img/me.jpg"> </div>
+                </div>
+              </div>
+
+              <div class="window mx-auto showed" id="window-about-me">
+                <div class="title-bar">
+                  <div class="title-bar-text d-flex flex-row align-items-center"> <img src="ico/Notepad.ico" alt="" width="16" height="16" class="d-inline-block align-text-top icon-button"> About me - Notepad</div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize" id="minimize-about-me" onclick="minimizeWindow('#window-about-me')"></button>
+                    <button aria-label="Maximize" id="maximize-about-me" onclick="maximizeWindow('window-about-me', 'maximize-about-me', 'restore')"></button>
+                    <button aria-label="Close" id="close-about-me"  onclick="closeWindow('#window-about-me', '#btn-taskbar-about-me')"></button>
+                  </div>
+                </div>
+                <div class="d-flex flex-row align-items-center ms-1"> <p class="notepad-navbar-elements">File</p> <p class="notepad-navbar-elements">Edit</p>  <p class="notepad-navbar-elements">Search</p>  <p class="notepad-navbar-elements">Help</p> </div>
+                <div class="window-body">
+                    <div> <textarea id="text20" rows="8" readonly> It's me Matias on my Windows 98 portfolio!</textarea> </div>
+                </div>
+              </div>
+
+              <div class="window" id="window-education">
+                <div class="title-bar">
+                  <div class="title-bar-text d-flex flex-row align-items-center"> <img src="ico/EXE File.ico" alt="" width="16" height="16" class="d-inline-block align-text-top icon-button"> Education.exe</div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize" id="minimize-education" onclick="minimizeWindow('#window-education')"></button>
+                    <button aria-label="Maximize" id="maximize-education" onclick="maximizeWindow('window-education', 'maximize-education', 'restore')"></button>
+                    <button aria-label="Close" id="close-education"  onclick="closeWindow('#window-education', '#btn-taskbar-education')"></button>
+                  </div>
+                </div>
+                <div class="window-body" id="window-education-body">
+                    <div> 
+                      <ul>  
+                        <li>  
+                          <div class="row">
+                            <div class="d-flex flex-row justify-content-between align-items-start mt-4"> 
+                              <div class="ms-3 me-3 mb-4" > <p> <b> Título Universitario En Desarrollo Web </b> </p>  <a class="link" href="https://www.unlam.edu.ar/" target="_blank">Universidad Nacional De La Matanza</a> </div>
+                              <div class="ms-3 me-3" ><p> April 2019 - June 2022 </p></div>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="row mt-4">
+                            <div class="d-flex flex-row justify-content-between align-items-start"> 
+                              <div class="ms-3 me-3 mb-4" > <p> <b>Bachiller En Ciencias Sociales</b> </p> <a class="link" href="https://iwmcastelar.com.ar/" target="_blank">Instituto William Morris De Castelar</a> </div>
+                              <div class="ms-3 me-3" ><p> March 2009 - December 2014 </p></div>
+                            </div>
+                          </div>
+                        </li>
+
+                      </ul>  
+                    </div>
+                </div>
+              </div>
+
+              <div class="window" id="window-experience">
+                <div class="title-bar">
+                  <div class="title-bar-text d-flex flex-row align-items-center"> <img src="ico/EXE File.ico" alt="" width="16" height="16" class="d-inline-block align-text-top icon-button"> Experience.exe</div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize" id="minimize-experience" onclick="minimizeWindow('#window-experience')"></button>
+                    <button aria-label="Maximize" id="maximize-experience" onclick="maximizeWindow('window-experience', 'maximize-experience', 'restore')"></button>
+                    <button aria-label="Close" id="close-experience"  onclick="closeWindow('#window-experience', '#btn-taskbar-experience')"></button>
+                  </div>
+                </div>
+                <div class="window-body" id="window-exeprience-body">
+                    <div> 
+                      <ul>  
+                        <li>  
+                          <div class="row">
+                            <div class="d-flex flex-row justify-content-between align-items-start mt-4"> 
+                              <div class="ms-3 me-3 mb-4" > <p> <b> PHP Developer</b> </p>  <a class="link" href="https://www.conicet.gov.ar/" target="_blank">CONICET</a> </div>
+                              <div class="ms-3 me-3" ><p> May 2022 - Present </p></div>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li>
+                          <div class="row mt-4">
+                            <div class="d-flex flex-row justify-content-between align-items-start"> 
+                              <div class="ms-3 me-3 mb-4" > <p> <b>FullStack Developer</b> </p> <a class="link" href="https://www.quantia.com.ar/" target="_blank">Quantia S.A</a> </div>
+                              <div class="ms-3 me-3" ><p> August 2021 - April 2022 </p></div>
+                            </div>
+                          </div>
+                        </li>
+
+                      </ul>  
+                    </div>
+                </div>
+              </div>
+
+              <div class="window" style="width: 300px" id="window-technologie-info">
+                <div class="title-bar">
+                  <div class="title-bar-text">Experience</div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Close" id="close-technologie-info" onclick="closeWindow('#window-technologie-info', null)"></button>
+                  </div>
+                </div>
+                <div class="window-body">
+                  <div class="d-flex flex-row align-items-center justify-content-around">
+                    <a class="web-lenguage" href="" target="_blank"><img class="icon-lenguage" width="64" height="64"></a>
+                    <span class="time-experiencie mt-3"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="window"  id="window-technologies">
+                <div class="title-bar">
+                  <div class="title-bar-text d-flex flex-row align-items-center"><img src="ico/EXE File.ico" alt="" width="16" height="16" class="d-inline-block align-text-top icon-button"> Technologies.exe</div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize" id="minimize-technologies" onclick="minimizeWindow('#window-technologies')"></button>
+                    <button aria-label="Maximize" id="maximize-technologies" onclick="maximizeWindow('window-technologies', 'maximize-technologies', 'restore-technologies')"></button>
+                    <button aria-label="Close" id="close-technologies" onclick="closeWindow('#window-technologies', '#btn-taskbar-technologies')"></button>
+                  </div>
+                </div>
+                <div class="window-body">
+                  <ul class="d-flex flex-row justify-content-around mb-4">
+
+                    <li class="d-1"><img src="img/lenguages/java.png" alt="JAVA" class="d-inline-block align-text-top lenguage-experience" data-url="https://dev.java/" data-year="+2"></li>
+                    <li class="d-1"><img src="img/lenguages/php.png" alt="PHP" class="d-inline-block align-text-top lenguage-experience" data-url="https://www.php.net/" data-year="+1"></li>
+                    <li class="d-1"><img src="img/lenguages/c-sharp.png" alt="C#" class="d-inline-block align-text-top lenguage-experience" data-url="https://docs.microsoft.com/en-us/dotnet/csharp/" data-year="1"></li>
+
+                  </ul>
+
+                  <ul class="d-flex flex-row justify-content-around mb-4">
+                    
+                    <li class="d-1"><img src="img/lenguages/spring.svg" alt="SPRINGBOOT" width="64" height="64" class="d-inline-block align-text-top" data-url="https://spring.io/projects/spring-boot/" data-year="1"></li>
+                    <li class="d-1"><img src="img/lenguages/laravel.svg"  alt="LARAVEL" width="64" height="64" class="d-inline-block align-text-top" data-url="https://laravel.com/" data-year="1"></li>
+                    <li class="d-1"><img src="img/lenguages/dot-net-original-wordmark.svg" alt="ASP.NET" width="64" height="64" class="d-inline-block align-text-top" data-url="https://dotnet.microsoft.com/en-us/" data-year="1"></li>
+
+                  </ul>
+
+                  <ul class="d-flex flex-row justify-content-around mb-4">
+                    
+                    <li class="d-1"><img src="img/lenguages/html-5.png" alt="REACT" class="d-inline-block align-text-top"></li>
+                    <li class="d-1"><img src="img/lenguages/css-3.png" alt="CSS3" class="d-inline-block align-text-top"></li>
+                    <li class="d-1"><img src="img/lenguages/js.png" alt="JAVASCRIPT" class="d-inline-block align-text-top"></li>
+                    
+                  </ul>
+
+                  <ul class="d-flex flex-row justify-content-around mb-4">
+                    
+                    <li class="d-1"><img src="img/lenguages/REACT.png" alt="REACT" class="d-inline-block align-text-top"></li>
+                    <li class="d-1"><img src="img/lenguages/bootstrap.svg" alt="CSS3" width="64" height="64" class="d-inline-block align-text-top"></li>
+                    <li class="d-1"><img src="img/lenguages/materialize.svg" alt="JAVASCRIPT" width="64" height="64" class="d-inline-block align-text-top"></li>
+                    
+                  </ul>
+
+                  <ul class="d-flex flex-row justify-content-around mb-4">
+                    
+                    <li class="d-1"><img src="img/lenguages/sql-server.png" alt="SPRINGBOOT" width="64" height="64" class="d-inline-block align-text-top"></li>
+                    <li class="d-1"><img src="img/lenguages/mysql.png"  alt="LARAVEL" width="64" height="64" class="d-inline-block align-text-top"></li>
+                    <li class="d-1"><img src="img/lenguages/mongodb-original-wordmark.svg" alt="ASP.NET" width="64" height="64" class="d-inline-block align-text-top"></li>
+
+                  </ul>
+
+                  <ul class="d-flex flex-row justify-content-around mb-4">
+                    
+                    <li class="d-1"><img src="img/lenguages/file-type-apache.svg" width="64" height="64" alt="REACT" class="d-inline-block align-text-top"></li>
+                    <li class="d-1"><img src="img/lenguages/icons8-nodejs.svg" alt="CSS3" width="64" height="64" class="d-inline-block align-text-top"></li>
+                    <li class="d-1"><img src="img/lenguages/apache-tomcat.svg" alt="JAVASCRIPT" width="64" height="64" class="d-inline-block align-text-top"></li>
+                    
+                  </ul>
+
+                  <ul class="d-flex flex-row justify-content-around mb-4">
+                    
+                    <li class="d-1"><img src="img/lenguages/json.svg" width="64" height="64" alt="REACT" class="d-inline-block align-text-top"></li>
+                    <li class="d-1"><img src="img/lenguages/postman.svg" alt="CSS3" width="64" height="64" class="d-inline-block align-text-top"></li>
+                    <li class="d-1"><img src="img/lenguages/file-type-swagger.svg" alt="JAVASCRIPT" width="64" height="64" class="d-inline-block align-text-top"></li>
+                    
+                  </ul>
+
+                  <ul class="d-flex flex-row justify-content-around mb-4">
+                    
+                    <li class="d-1"><img src="img/lenguages/git.svg" width="64" height="64" alt="REACT" class="d-inline-block align-text-top"></li>
+                    <li class="d-1"><img src="img/lenguages/gitlab.svg" alt="CSS3" width="64" height="64" class="d-inline-block align-text-top"></li>
+                    <li class="d-1"><img src="img/lenguages/gitea.svg" alt="JAVASCRIPT" width="64" height="64" class="d-inline-block align-text-top"></li>
+                    
+                  </ul>
+
+                  <ul class="d-flex flex-row justify-content-around mb-4">
+                    
+                    <li class="d-1"><img src="img/lenguages/windows.svg" width="64" height="64" alt="REACT" class="d-inline-block align-text-top"></li>
+                    <li class="d-1"><img src="img/lenguages/linux.svg" alt="CSS3" width="64" height="64" class="d-inline-block align-text-top"></li>
+                    <li class="d-1"><img src="img/lenguages/vmware.svg" alt="JAVASCRIPT" width="64" height="64" class="d-inline-block align-text-top"></li>
+                    
+                  </ul>
+
+                </div>
+              </div>
+
+              <div class="window" id="window-internet-explorer">
+                <div class="title-bar">
+                  <div class="title-bar-text d-flex flex-row align-items-center"><img src="ico/Webpage.ico" alt="" width="16" height="16" class="d-inline-block align-text-top icon-button"> Google - Microsoft Internet Explorer</div>
+                  <div class="title-bar-controls">
+                    <button aria-label="Minimize" id="minimize-internet-explorer" onclick="minimizeWindow('#window-internet-explorer')"></button>
+                    <button aria-label="Maximize" id="maximize-internet-explorer" onclick="maximizeWindow('window-internet-explorer', 'maximize-internet-explorer', 'restore-internet-explorer')"></button>
+                    <button aria-label="Close" id="close"  onclick="closeWindow('#window-internet-explorer', '#btn-taskbar-internet-explorer')"></button>
+                  </div>
+                </div>
+                <div class="window-body">
+                  <iframe id="if1" width="100%" height="500px" style="visibility:visible" src="https://www.google.com/search?igu=1"></iframe>
+                </div>
+              </div>
+        </div>
+    </section>
+
+
+    <footer class="fixed"> 
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+
+              <div class="btn-group dropup">
+                <button id="windows-start-button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="ico/windows.ico" alt="me" width="24" height="18"  class="windows-start-icon"> <b class="ms-1">Start</b>
+                </button>
+                
+                  <div class="dropdown-menu">
+                    <div class="row">
+                      <div class="col windows-98-conteiner align-self-end">
+                        <p class="vericaltext">
+                          <b>Windows</b>98
+                        </p>
+                      </div>
+                     
+                      <div class="col align-self-end">
+                        <ul>              
+                        <li><a class="dropdown-item d-flex align-items-center" id="btn-technologies" onclick="openWindow('#window-technologies', '#btn-taskbar-technologies')"> <img src="ico/EXE File.ico" alt="" width="30" height="24" class="d-inline-block align-text-top icon-button"> <span class="text-icon-button">Technologies</span></a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" id="btn-education" onclick="openWindow('#window-education', '#btn-taskbar-education')"> <img src="ico/EXE File.ico" alt="" width="30" height="24" class="d-inline-block align-text-top icon-button"> <span class="text-icon-button">Education</span></a></li>   
+                        <li><a class="dropdown-item d-flex align-items-center" id="btn-experience" onclick="openWindow('#window-experience', '#btn-taskbar-experience')"><img src="ico/EXE File.ico" alt="" width="30" height="24" class="d-inline-block align-text-top icon-button"> <span class="text-icon-button">Experience</span></a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" id="btn-about-me" onclick="openWindow('#window-about-me', '#btn-taskbar-about-me')"><img src="ico/TXT File.ico" alt="" width="30" height="24" class="d-inline-block align-text-top icon-button"> <span class="text-icon-button">About me</span></a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" onclick="openWindow('#window', '#btn-taskbar-photo-me')"><img src="ico/JPG File.ico" alt="" width="30" height="24" class="d-inline-block align-text-top icon-button"> <span class="text-icon-button">Me</span></a></li>
+                        <li><div class="space-items mt-2"></div></li>
+                        <li><a class="dropdown-item d-flex align-items-center" onclick="openWindow('#window', '#btn-taskbar-photo-me')"><img src="ico/key_win.ico" alt="" width="30" height="24" class="d-inline-block align-text-top icon-button"> <span class="text-icon-button">Log off...</span></a></li>
+                        <li><a class="dropdown-item d-flex align-items-center" onclick="openWindow('#window', '#btn-taskbar-photo-me')"><img src="ico/shut_down_with_computer.ico" alt="" width="30" height="24" class="d-inline-block align-text-top icon-button"> Sh<span class="text-icon-button">ut Down...</span></a></li>
+                      </ul>
+                      </div>
+                    </div>
+                  </div>
+            
+              </div>
+
+                <div class="line-separator-less"></div> 
+                
+                <div class="line-separator-grow"></div> 
+
+                <div class="functionality-icons-conteiner">
+                
+                  <a href="#" onclick="openWindow('#window-internet-explorer', '#btn-taskbar-internet-explorer')"> <img src="ico/Internet Explorer.ico" alt="" width="16" height="16" class="d-inline-block align-text-top icon-button extra-taskbar-icon"> </a>
+
+                  <a href="#" onclick="window.location.reload()"> <img src="ico/desktop.ico" alt="" width="16" height="16" class="d-inline-block align-text-top icon-button extra-taskbar-icon"> </a>
+                
+                </div>
+
+              <div class="line-separator-less"></div> 
+              
+              <div class="line-separator-grow"></div>
+
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+             
+                <ul class="navbar-nav">
+              
+                  <li class='nav-item' id="btn-taskbar-photo-me"> 
+                    <button id='btn' onclick="btnShowOrHideWindow('#window')"><img src='ico/JPG File.ico'  width="22" height="18"></img> Me</button>
+                  </li>
+
+                  <li class='nav-item' id="btn-taskbar-about-me"> 
+                    <button id='btn' onclick="btnShowOrHideWindow('#window-about-me')"><img src='ico/TXT File.ico'  width="22" height="18"></img> About me - Notepad</button>
+                  </li>
+
+                  <li class='nav-item' id="btn-taskbar-education"> 
+                    <button id='btn' onclick="btnShowOrHideWindow('#window-education')"><img src='ico/EXE File.ico' width="22" height="18"></img> Education.exe</button>
+                  </li>
+
+                  <li class='nav-item' id="btn-taskbar-experience"> 
+                    <button id='btn' onclick="btnShowOrHideWindow('#window-experience')"><img src='ico/EXE File.ico'  width="22" height="18"></img> Experience.exe</button>
+                  </li>
+
+                  <li class='nav-item' id="btn-taskbar-technologies" > 
+                    <button id='btn' onclick="btnShowOrHideWindow('#window-technologies')"><img src='ico/EXE File.ico' width="22" height="18"></img> Technologies.exe</button>
+                  </li>
+
+                  <li class='nav-item' id="btn-taskbar-internet-explorer" > 
+                    <button id='btn' onclick="btnShowOrHideWindow('#window-internet-explorer')"><img src='ico/Webpage.ico' width="22" height="18"></img> Google - Microsoft Internet Explorer</button>
+                  </li>
+                  
+                </ul>
+
+              </div>
+              <div class="status-bar" >
+                <div class="status-bar-field">  <img src="ico/Sound.ico" alt="" width="16" height="16" class="d-inline-block align-text-top icon-button">  <p class="time"></p>  </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
+<script src="js/portfolio.js"></script>
+
+<script>
+
+moveElementWithMouse('window', 'maximize', 'restore');
+moveElementWithMouse('window-about-me', 'maximize-about-me', 'restore');
+moveElementWithMouse('window-technologies', 'maximize-technologies', 'restore-technologies');
+moveElementWithMouse('window-experience', 'maximize-experience', 'restore');
+moveElementWithMouse('window-education', 'maximize-education', 'restore');
+moveElementWithMouse('window-internet-explorer', 'maximize-internet-explorer', 'restore-internet-explorer');
+moveElementWithMouse('window-technologie-info', null, null);
+
+  
+</script>
+
+</body>
+</html>
