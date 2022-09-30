@@ -1,3 +1,9 @@
+
+html,
+body {
+    height: 100%;
+}
+
 body{
     background-color: #008080; 
     font-family: "Pixelated MS Sans Serif",Arial;
@@ -6,26 +12,41 @@ body{
 }
 
 textarea{
-
     width: 100%;
+    font-size: 1.3em;
+    text-align: start;
+    font-family: 'Courier New', Courier, monospace;
     height: auto;
     border: none;
-    overflow: auto;
+    overflow: scroll;
     outline: none;
-
-    /* -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none; */
-
     resize: none; /*remove the resize handle on the bottom right*/
 }
 
+#window{
+    top: 15%;
+    left: 0%;
+    right: 52%;
+    transform: none;
+}
+
+#window-about-me {
+    top: 15%;
+    left: 0%;
+    left:52%;
+    transform: none;
+}
+
+
 .window{
+
+    position: fixed;
     width: 40%;
-    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
     z-index: 0;
-    resize: both;
-    overflow: auto;
+   
 }
 
 .dropdown-menu #btn-technologies{
@@ -58,7 +79,7 @@ nav{
 }
 
 .fixed{
-    z-index: 99;
+    z-index: 100000;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -300,4 +321,12 @@ ul{
 
     cursor: pointer;
   }
+
+  .time-experiencie{
+
+    font-size: 1.2em;
+    word-spacing: 3px;
+  }
+
+
 

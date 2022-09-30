@@ -1,3 +1,5 @@
+var savedPositionTop = 0;
+var savedPositionLeft = 0;
 $('#windows-start-button').click(function () {
     
     $('.start-bar').show();
@@ -20,7 +22,10 @@ function minimizeWindow(idWindowToMinimize) {
 
 function maximizeWindow(idWindow, idBtnMaximize, idBtnRestore) {
 
-  if($('#'+idBtnMaximize).length){
+  if ($('#' + idBtnMaximize).length) {
+
+    savedPositionTop = $('#' + idWindow).css("top");
+    savedPositionLeft = $('#' + idWindow).css("left");
 
     $('#'+idBtnMaximize).attr('aria-label', 'Restore');
 
@@ -35,6 +40,8 @@ function maximizeWindow(idWindow, idBtnMaximize, idBtnRestore) {
     $('#' + idWindow).css("top", "0px");
 
     $('#' + idWindow).css("left", "0px");
+
+    $('#' + idWindow).css("transform", "none");
 
     if (idBtnMaximize === "maximize") {
 
@@ -62,7 +69,11 @@ function maximizeWindow(idWindow, idBtnMaximize, idBtnRestore) {
     $('#'+idBtnRestore).attr('aria-label', 'Maximize');
 
     $('#' + idBtnRestore).attr('id', idBtnMaximize);
-    
+
+    $('#' + idWindow).css("top", savedPositionTop);
+
+    $('#' + idWindow).css("left", savedPositionLeft);
+
     if (idBtnMaximize === "maximize") {
 
       $("#photo").css("width", "400px");
@@ -112,7 +123,7 @@ function btnShowOrHideWindow(idWindowToShowOrHide) {
 }
 
 function moveElementWithMouse(id, idBtnMaximize, idBtnRestore) {
-  
+
   var mousePosition;
   var offset = [0,0];
   var w;
@@ -122,6 +133,7 @@ function moveElementWithMouse(id, idBtnMaximize, idBtnRestore) {
   var counter = 1;
       
   w = document.getElementById(id);
+  
   windows = document.getElementsByClassName('window');
 
   w.addEventListener('mousedown', function (e) {
@@ -153,7 +165,7 @@ function moveElementWithMouse(id, idBtnMaximize, idBtnRestore) {
       
         $('#' + id).css("width", "40%");
     
-        $('#'+id).css("height", "auto");
+        $('#' + id).css("height", "auto");
 
         $('#'+idBtnRestore).attr('aria-label', 'Maximize');
 
@@ -205,17 +217,38 @@ function startTime() {
   
 }
 
-  $('#window-technologies li').click(function () {
+$('#window-technologies li').click(function () {
 
-    openWindow("#window-technologie-info", null);
+  var hasNumber = /\d/;   
+ 
+  openWindow("#window-technologie-info", null);
 
-    $(".web-lenguage").attr("href", $(this).children().attr("data-url"));
+  $(".web-lenguage").attr("href", $(this).children().attr("data-url"));
 
-    $(".icon-lenguage").attr("src", $(this).children().attr("src"));
+  $(".icon-lenguage").attr("src", $(this).children().attr("src"));
+  
+  if ($(this).children().attr("data-year").includes("1")) {
+
+    $(".time-experiencie").html($(this).children().attr("data-year") + "" + " year");
+
+  }
+
+  else {
+
+    if (!hasNumber.test($(this).children().attr("data-year"))) {
       
-     $(".time-experiencie").html($(this).children().attr("data-year") + "" + " years");
+      $(".time-experiencie").html($(this).children().attr("data-year"));
+    }
+
+    else {
+      
+      $(".time-experiencie").html($(this).children().attr("data-year") + "" + " years");
+
+    }
     
-  });
+  }
+
+});
   
 
 
