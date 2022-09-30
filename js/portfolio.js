@@ -73,21 +73,26 @@ function maximizeWindow(idWindow, idBtnMaximize, idBtnRestore) {
     $('#' + idWindow).css("top", savedPositionTop);
 
     $('#' + idWindow).css("left", savedPositionLeft);
+    
+    $('#' + idWindow).css("transform", "translate(-50%, -50%)");
 
     if (idBtnMaximize === "maximize") {
 
       $("#photo").css("width", "400px");
       $("#photo").css("height", "auto");
+      $('#' + idWindow).css("transform", "none");
     }
 
     if (idBtnMaximize === "maximize-about-me") {
       
       $("textarea").css("height", "auto");
+      $('#' + idWindow).css("transform", "none");
     }
 
     if (idBtnMaximize === "maximize-internet-explorer") {
       
       $("iframe").css("height", "500px");
+      
     }
     
 
