@@ -1,17 +1,16 @@
-
 html,
 body {
     height: 100%;
 }
 
-body{
-    background-color: #008080; 
-    font-family: "Pixelated MS Sans Serif",Arial;
+body {
+    background-color: #008080;
+    font-family: "Pixelated MS Sans Serif", Arial;
     font-size: 11px;
-    
+
 }
 
-textarea{
+textarea {
     width: 100%;
     font-size: 1.3em;
     text-align: start;
@@ -20,10 +19,11 @@ textarea{
     border: none;
     overflow: scroll;
     outline: none;
-    resize: none; /*remove the resize handle on the bottom right*/
+    resize: none;
+        /*remove the resize handle on the bottom right*/
 }
 
-#window{
+#window {
     top: 15%;
     left: 0%;
     right: 52%;
@@ -33,52 +33,60 @@ textarea{
 #window-about-me {
     top: 15%;
     left: 0%;
-    left:52%;
+    left: 52%;
     transform: none;
 }
 
 
-.window{
+.window {
 
     position: fixed;
     width: 40%;
-    top: 50%; 
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     z-index: 0;
-   
+
 }
 
-.dropdown-menu #btn-technologies{
+.dropdown-menu #btn-technologies {
 
     display: block;
 }
 
-#window-technologies, #btn-taskbar-technologies, #window-experience, #btn-taskbar-experience, #window-education, #btn-taskbar-education, #window-internet-explorer, #btn-taskbar-internet-explorer, #window-technologie-info{
+#window-technologies,
+#btn-taskbar-technologies,
+#window-experience,
+#btn-taskbar-experience,
+#window-education,
+#btn-taskbar-education,
+#window-internet-explorer,
+#btn-taskbar-internet-explorer,
+#window-technologie-info {
 
     display: none;
 }
 
-#photo{
+#photo {
 
-  width: 400px;
-
-}
-
-.navbar{
-
-    padding-top: 0.3rem!important;
+    width: 400px;
 
 }
 
-nav{
+.navbar {
+
+    padding-top: 0.3rem !important;
+
+}
+
+nav {
 
     background-color: #c3c3c3;
     border-top: 3px solid #e8e7e7;
     border-top-style: ridge;
 }
 
-.fixed{
+.fixed {
     z-index: 100000;
     position: fixed;
     left: 0;
@@ -90,65 +98,63 @@ nav{
     text-align: center;
 }
 
-.dropdown-menu{
+.dropdown-menu {
 
-  background-color: #c3c3c3;
- 
+    background-color: #c3c3c3;
 }
 
-.dropdown-item::first-letter{
+.dropdown-item::first-letter {
 
-    
+
     text-decoration: underline;
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
     color: white;
     background-color: #010081;
 }
 
-li{
+li {
 
     list-style: none;
 }
 
-ul{
+ul {
 
-    margin: 0px!important;
-    padding: 0px!important;
+    margin: 0px !important;
+        padding: 0px !important;
 }
 
-.notepad-navbar-elements{
+.notepad-navbar-elements {
 
     margin: 6px 0px 0px 5px;
 }
 
 
 
-.notepad-navbar-elements::first-letter{
+.notepad-navbar-elements::first-letter {
 
-    text-decoration: underline!important;
-    
+    text-decoration: underline !important;
 }
 
-#btn{
+#btn {
 
     margin: 2px;
 }
 
-#windows-start-button{
+#windows-start-button {
 
     margin: 2px;
 }
 
-.status-bar{
+.status-bar {
 
     margin-right: -12px;
     width: 100px;
 }
 
 
-.status-bar-field{
+.status-bar-field {
     display: flex;
     align-content: center;
     align-items: center;
@@ -159,25 +165,26 @@ ul{
     border-bottom: 3px solid #e8e7e7;
     border-bottom-style: ridge;
     height: 2.7em;
-    
+
 }
 
-#window-exeprience-body, #window-education-body{
+#window-exeprience-body,
+#window-education-body {
 
     font-size: 15px;
     font-weight: 500;
     font-family: 'Courier New', Courier, monospace;
-    
+
 }
 
-.link{
+.link {
 
     color: black;
     text-decoration: none;
 
 }
 
-#btn{
+#btn {
 
     width: 22em;
     text-align: left;
@@ -185,9 +192,9 @@ ul{
     border-bottom: solid 0.1px black;
 }
 
-.dropdown-menu{
+.dropdown-menu {
 
-    border-radius: 0px!important;
+    border-radius: 0px !important;
     border-left: 3px solid #e8e7e7;
     border-left-style: ridge;
     border-right: 1px solid black;
@@ -198,135 +205,132 @@ ul{
 
 }
 
-.line-separator-less{
+.line-separator-less {
     margin-left: 2px;
     height: 22px;
     border-left: solid 1px #818181;
 }
 
-.line-separator-grow{
+.line-separator-grow {
 
     height: 20px;
     margin-left: 2px;
     margin-right: 8px;
     border: solid 1px #5c5c5c;
     padding: 1px;
-    box-shadow: inset -1px -1px #818181,inset 1px 1px #c7c7c7,inset -2px -2px grey,inset 2px 2px rgb(218, 218, 218);
+    box-shadow: inset -1px -1px #818181, inset 1px 1px #c7c7c7, inset -2px -2px grey, inset 2px 2px rgb(218, 218, 218);
 
 }
 
-.extra-taskbar-icon{
+.extra-taskbar-icon {
 
     margin-right: 8px
 }
 
-.windows-start-icon{
+.windows-start-icon {
 
     margin-top: -3px;
 }
 
-.vericaltext{
+.vericaltext {
     writing-mode: vertical-lr;
     transform: rotate(-180deg);
     color: #fdffff;
     margin: 0px auto 5px;
 }
 
-.row{
+.row {
 
-    --bs-gutter-x: none!important;
-    flex-wrap: nowrap!important;
-    margin-top: -8px!important;
-    margin-bottom: -8px!important;
+    --bs-gutter-x: none !important;
+        flex-wrap: nowrap !important;
+        margin-top: -8px !important;
+        margin-bottom: -8px !important;
 }
 
-.windows-98-conteiner{
-    background: linear-gradient(180deg,#010081,#010081, #010081, #0c0bdff0);
+.windows-98-conteiner {
+    background: linear-gradient(180deg, #010081, #010081, #010081, #0c0bdff0);
     padding-top: 200px;
     width: 36px;
     font-size: 1.1em;
-    
+
 }
 
-.dropdown-item{
+.dropdown-item {
 
     font-size: 0.7em;
 }
 
-.icon-button{
+.icon-button {
 
     margin-right: 8px;
 }
 
-.text-icon-button::first-letter{
+.text-icon-button::first-letter {
 
     text-decoration: underline;
 }
 
-.space-items{
+.space-items {
 
     border-top: solid 1px #818181;
     border-bottom: solid 1px white;
 }
 
 .d-1:hover {
-    --c: #c3c3c3; /* the color */
-    --b: .2em;    /* border length*/
-    --d: 25px;    /* the cube depth */
-    --h: 1.5em;   /* the height */
-    
+    --c: #c3c3c3;
+        /* the color */
+        --b: .2em;
+        /* border length*/
+        --d: 25px;
+        /* the cube depth */
+        --h: 1.5em;
+        /* the height */
     --_s: calc(var(--d) + var(--b));
     color: #0000;
-    text-shadow: 
-      0 calc(-1*var(--_t,0em)) var(--c), 
-      0 calc(var(--h) - var(--_t,0em)) #fff;
+    text-shadow:
+        0 calc(-1*var(--_t, 0em)) var(--c),
+            0 calc(var(--h) - var(--_t, 0em)) #fff;
     border: solid #008080;
     overflow: hidden;
     border-width: var(--b) var(--_s) var(--_s) var(--b);
     background:
-      linear-gradient(var(--c) 0 0) -1px 100%
-       /101% var(--_p,0%) no-repeat,
-      conic-gradient(from -90deg at right var(--d)  bottom var(--d),
-        #0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgb(255 255 255 /0.6) 0) border-box,
-      conic-gradient(at right var(--_s) bottom var(--_s),
-        var(--c) 270deg,#0000 0) 100% 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
-    transform: translate(var(--d),var(--d));
-    clip-path: 
-      polygon(
-        0% 0%,
-        calc(100% - var(--d)) 0%,
-        calc(100% - var(--d)) 0%,
-        calc(100% - var(--d)) calc(100% - var(--d)),
-        0 calc(100% - var(--d)),
-        0 calc(100% - var(--d))
-      );
+        linear-gradient(var(--c) 0 0) -1px 100% /101% var(--_p, 0%) no-repeat,
+            conic-gradient(from -90deg at right var(--d) bottom var(--d),
+                #0000 90deg, rgb(255 255 255 /0.3) 0 225deg, rgb(255 255 255 /0.6) 0) border-box,
+            conic-gradient(at right var(--_s) bottom var(--_s),
+            var(--c) 270deg,
+                #0000 0) 100% 100%/calc(100% - var(--b)) calc(100% - var(--b)) border-box;
+                transform: translate(var(--d), var(--d));
+                clip-path:
+        polygon(0% 0%,
+                calc(100% - var(--d)) 0%,
+                calc(100% - var(--d)) 0%,
+                calc(100% - var(--d)) calc(100% - var(--d)),
+                0 calc(100% - var(--d)),
+            0 calc(100% - var(--d)));
     transition: 0.5s;
-  }
-  .d-1:hover {
-    transform: translate(0,0);
-    clip-path: 
-      polygon(
-        0% 0%,
-        calc(100% - var(--d)) 0%,
-        100% var(--d),
-        100% 100%,
-        var(--d) 100%,
-        0 calc(100% - var(--d))
-      );
+}
+
+.d-1:hover {
+    transform: translate(0, 0);
+        clip-path:
+        polygon(0% 0%,
+                calc(100% - var(--d)) 0%,
+                100% var(--d),
+                100% 100%,
+                var(--d) 100%,
+            0 calc(100% - var(--d)));
     --_t: var(--h);
     --_p: 105%;
-  }
+}
 
-  .lenguage-experience{
+.lenguage-experience {
 
     cursor: pointer;
-  }
+}
 
-  .time-experiencie{
+.time-experiencie {
 
     font-size: 1.2em;
     word-spacing: 3px;
-  }
-
-
-
+}
