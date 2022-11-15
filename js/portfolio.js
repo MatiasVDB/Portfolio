@@ -1,13 +1,17 @@
-const hashtag = '#';
-var savedPositionTop = '';
-var savedPositionLeft = '';
-var idBtnRestore = '';
+const HASHTAG = '#';
+const WINDOW = 'window';
+const ABOUT_ME = 'window-about-me';
+const INTERNET_EXPLORER = 'window-internet-explorer';
+let savedPositionTop = '';
+let savedPositionLeft = '';
+let idBtnRestore = '';
 
 function openWindow(idWindow, idButtonFromTaskbarToShow) {
 
   $(idWindow).show();
+  $(idWindow).removeClass("hidded").addClass("showed");
   $(idButtonFromTaskbarToShow).show();
-  $(idWindow).css("z-index", "10000");
+  putElementInFront(idWindow);
 
 }
 
@@ -36,34 +40,35 @@ function selectorSizeWindow(window, e) {
 function maximizeWindow(window, obj) {
 
   idBtnRestore = obj;
-  savedPositionTop = $(hashtag + window).css("top");
-  savedPositionLeft = $(hashtag + window).css("left");
+  savedPositionTop = $(HASHTAG + window).css("top");
+  savedPositionLeft = $(HASHTAG + window).css("left");
 
   $(obj).attr('aria-label', "Restore");
 
-  $(hashtag + window).css("width", "100%");
+  $(HASHTAG + window).css("width", "100%");
 
-  $(hashtag + window).css("position", "fixed");
+  $(HASHTAG + window).css("position", "fixed");
 
-  $(hashtag + window).css("top", "0px");
+  $(HASHTAG + window).css("top", "0px");
 
-  $(hashtag + window).css("left", "0px");
+  $(HASHTAG + window).css("left", "0px");
 
-  $(hashtag + window).css("transform", "none");
+  $(HASHTAG + window).css("transform", "none");
 
   switch (window) {
-    case 'window':
+    case WINDOW:
       $("#photo").css("width", "60em");
-      $("#photo").css("height", "77em");
+      $("#photo").css("height", "90.5vh");
       break;
-    case 'window-about-me':
-      $("textarea").css("height", "78em");
+    case ABOUT_ME:
+      $("textarea").css("height", "85.5vh");
       break;
-    case 'window-internet-explorer':
-      $("iframe").css("height", "1000px");
+    case INTERNET_EXPLORER:
+      $("iframe").css("height", "90vh");
       break;
+
     default:
-      $(hashtag + window).css("height", "96%");
+      $(HASHTAG + window).css("height", "95.2vh");
   }
 }
 
@@ -71,29 +76,29 @@ function restoreWindow(window, obj) {
 
   $(obj).attr('aria-label', 'Maximize');
 
-  $(hashtag + window).css("width", "40%");
+  $(HASHTAG + window).css("width", "40%");
 
-  $(hashtag + window).css("top", savedPositionTop);
+  $(HASHTAG + window).css("top", savedPositionTop);
 
-  $(hashtag + window).css("left", savedPositionLeft);
+  $(HASHTAG + window).css("left", savedPositionLeft);
 
-  $(hashtag + window).css("transform", "translate(-50%, -50%)");
+  $(HASHTAG + window).css("transform", "translate(-50%, -50%)");
 
   switch (window) {
-    case 'window':
+    case WINDOW:
       $("#photo").css("width", "400px");
       $("#photo").css("height", "auto");
-      $(hashtag + window).css("transform", "none");
+      $(HASHTAG + window).css("transform", "none");
       break;
-    case 'window-about-me':
+    case ABOUT_ME:
       $("textarea").css("height", "auto");
-      $(hashtag + window).css("transform", "none");
+      $(HASHTAG + window).css("transform", "none");
       break;
-    case 'window-internet-explorer':
+    case INTERNET_EXPLORER:
       $("iframe").css("height", "500px");
       break;
     default:
-      $(hashtag + window).css("height", "auto");
+      $(HASHTAG + window).css("height", "auto");
   }
 }
 
@@ -112,46 +117,76 @@ function btnShowOrHideWindow(idWindowToShowOrHide) {
     $(idWindowToShowOrHide).hide();
     $(idWindowToShowOrHide).removeClass("showed").addClass("hidded");
 
+
   }
 
   else {
 
     $(idWindowToShowOrHide).show();
     $(idWindowToShowOrHide).removeClass("hidded").addClass("showed");
-    $(idWindowToShowOrHide).css("z-index", "10000");
+    putElementInFront(idWindowToShowOrHide);
 
   }
 
 }
 
-function moveElementWithMouse(id) {
+function putElementInFront(obj) {
 
-  var mousePosition;
-  var offset = [0, 0];
-  var w;
-  var isDown = false;
-  var windows;
-  var counter = 1;
-
-  w = document.getElementById(id);
-
+  let windows;
+  let counter = 1;
   windows = document.getElementsByClassName('window');
 
-  w.addEventListener('mousedown', function (e) {
+ 
+  
+  for (var i = 0, il = windows.length; i < il; i++) {
+    windows[i].style.zIndex = 0;
+  }
 
-    for (var i = 0, il = windows.length; i < il; i++) {
-      windows[i].style.zIndex = 0;
-    }
 
-    w.style.zIndex = ++counter;
+  if ($(obj).attr('id') === 'window-technologies') {
+    
+    $("#window-technologie-info").css('z-index', 3);
+
+    // if ($("#window-technologie-info").hasClass("showed")) {
+
+    //   console.log("boke");
+
+    // $("#window-technologies").css('z-index', 1);
+
+    //   $("#window-technologie-info").css('z-index', ++counter);
+
+    // }
+
+}
+
+  else {
+
+    $(obj).css('z-index', ++counter);
+
+  }
+
+}
+
+function moveElementWithMouse(obj) {
+
+  let mousePosition;
+  let offset = [0, 0];
+  let elementToMove;
+  let isDown = false;
+  elementToMove = obj;
+  windows = document.getElementsByClassName('window');
+
+  $(HASHTAG + $(obj).attr('id') + '> .title-bar').mousedown(function (e) {
+
+    putElementInFront(elementToMove);
+
     isDown = true;
     offset = [
-      w.offsetLeft - e.clientX,
-      w.offsetTop - e.clientY
+      elementToMove.offsetLeft - e.clientX,
+      elementToMove.offsetTop - e.clientY
     ];
 
-
-  }, true);
+  });
 
   document.addEventListener('mouseup', function () {
     isDown = false;
@@ -164,9 +199,9 @@ function moveElementWithMouse(id) {
 
       if ($(idBtnRestore).attr('aria-label') === 'Restore') {
 
-        if (id !== 'window-technologie-info') {
+        if ($(obj).attr('id') !== 'window-technologie-info') {
 
-          restoreWindow(id, idBtnRestore);
+          restoreWindow($(obj).attr('id'), idBtnRestore);
 
         }
       }   
@@ -177,8 +212,8 @@ function moveElementWithMouse(id) {
 
       };
 
-      w.style.left = (mousePosition.x + offset[0]) + 'px';
-      w.style.top = (mousePosition.y + offset[1]) + 'px';
+      elementToMove.style.left = (mousePosition.x + offset[0]) + 'px';
+      elementToMove.style.top = (mousePosition.y + offset[1]) + 'px';
 
     }
 
@@ -202,7 +237,7 @@ $('#window-technologies li').click(function () {
 
   var hasNumber = /\d/;
 
-  openWindow("#window-technologie-info", null);
+  openWindow('#window-technologie-info', null);
 
   $(".web-lenguage").attr("href", $(this).children().attr("data-url"));
 

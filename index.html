@@ -18,7 +18,8 @@
 <body onload="startTime()">
   <section>
     <div class="container-fluid">
-      <div class="window mx-auto showed" id="window">
+      <div class="window mx-auto showed" id="window" onmousemove="moveElementWithMouse(this);"
+        onclick="putElementInFront(this)">
         <div class="title-bar">
           <div class="title-bar-text d-flex flex-row align-items-center"><img src="ico/JPG File.ico" alt="" width="16" height="16"
               class="d-inline-block align-text-top icon-button"> Me.jpeg</div>
@@ -29,11 +30,13 @@
             </div>
             </div>
             <div class="window-body">
-              <div class="text-center"><img class="mx-auto img-fluid" id="photo" alt="..." src="img/me.jpg"> </div>
+              <div class="text-center"><img class="mx-auto img-fluid" id="photo" alt="..." src="img/me.jpg">
+              </div>
             </div>
             </div>
 
-      <div class="window mx-auto showed" id="window-about-me">
+      <div class="window mx-auto showed" id="window-about-me" onmousemove="moveElementWithMouse(this)"
+        onclick="putElementInFront(this)">
         <div class="title-bar">
           <div class="title-bar-text d-flex flex-row align-items-center"> <img src="ico/Notepad.ico" alt="" width="16" height="16"
               class="d-inline-block align-text-top icon-button"> About me - Notepad</div>
@@ -67,7 +70,7 @@ Just patience if you find some bug, is a beta version...
           </div>
           </div>
           
-          <div class="window" id="window-education">
+          <div class="window" id="window-education" onmousemove="moveElementWithMouse(this)" onclick="putElementInFront(this)" ;>
             <div class="title-bar">
         <div class="title-bar-text d-flex flex-row align-items-center"> <img src="ico/EXE File.ico" alt="" width="16"
             height="16" class="d-inline-block align-text-top icon-button"> Education.exe</div>
@@ -114,7 +117,7 @@ Just patience if you find some bug, is a beta version...
           </div>
           </div>
 
-    <div class="window" id="window-experience">
+    <div class="window" id="window-experience" onmousemove="moveElementWithMouse(this)" onclick="putElementInFront(this)">
       <div class="title-bar">
         <div class="title-bar-text d-flex flex-row align-items-center"> <img src="ico/EXE File.ico" alt="" width="16"
             height="16" class="d-inline-block align-text-top icon-button"> Experience.exe</div>
@@ -159,7 +162,7 @@ Just patience if you find some bug, is a beta version...
           </div>
           </div>
 
-    <div class="window" style="width: 300px" id="window-technologie-info">
+    <div class="window" style="width: 300px" id="window-technologie-info" onmousemove="moveElementWithMouse(this)">
       <div class="title-bar">
         <div class="title-bar-text">Experience</div>
         <div class="title-bar-controls">
@@ -172,9 +175,9 @@ Just patience if you find some bug, is a beta version...
               <span class="time-experiencie mt-3"></span>
             </div>
           </div>
-          </div>
+      </div>
 
-    <div class="window" id="window-technologies">
+    <div class="window" id="window-technologies" onmousemove="moveElementWithMouse(this)" onclick="putElementInFront(this)">
       <div class="title-bar">
         <div class="title-bar-text d-flex flex-row align-items-center"><img src="ico/EXE File.ico" alt="" width="16" height="16"
             class="d-inline-block align-text-top icon-button"> Technologies.exe</div>
@@ -188,12 +191,15 @@ Just patience if you find some bug, is a beta version...
           <div class="window-body">
             <ul class="d-flex flex-row justify-content-around mb-4">
 
-          <li class="d-1"><img src="img/lenguages/java.png" alt="JAVA" class="d-inline-block align-text-top lenguage-experience"
+          <li class="d-1"><img src="img/lenguages/java.png" alt="JAVA"
+              class="d-inline-block align-text-top lenguage-experience img-fluid"
               data-url="https://dev.java/" data-year="2"></li>
-          <li class="d-1"><img src="img/lenguages/php.png" alt="PHP" class="d-inline-block align-text-top lenguage-experience"
+          <li class="d-1"><img src="img/lenguages/php.png" alt="PHP"
+              class="d-inline-block align-text-top lenguage-experience img-fluid"
               data-url="https://www.php.net/" data-year="+1">
           </li>
-          <li class="d-1"><img src="img/lenguages/c-sharp.png" alt="C#" class="d-inline-block align-text-top lenguage-experience"
+          <li class="d-1"><img src="img/lenguages/c-sharp.png" alt="C#"
+              class="d-inline-block align-text-top lenguage-experience img-fluid"
               data-url="https://docs.microsoft.com/en-us/dotnet/csharp/" data-year="-1"></li>
 
         </ul>
@@ -201,98 +207,99 @@ Just patience if you find some bug, is a beta version...
         <ul class="d-flex flex-row justify-content-around mb-4">
 
           <li class="d-1"><img src="img/lenguages/spring.svg" alt="SPRINGBOOT" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://spring.io/projects/spring-boot/" data-year="1">
+              class="d-inline-block align-text-top img-fluid" data-url="https://spring.io/projects/spring-boot/" data-year="1">
           </li>
           <li class="d-1"><img src="img/lenguages/laravel.svg" alt="LARAVEL" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://laravel.com/" data-year="-1"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://laravel.com/" data-year="-1"></li>
           <li class="d-1"><img src="img/lenguages/dot-net-original-wordmark.svg" alt="ASP.NET" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://dotnet.microsoft.com/en-us/" data-year="-1"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://dotnet.microsoft.com/en-us/" data-year="-1"></li>
 
         </ul>
 
         <ul class="d-flex flex-row justify-content-around mb-4">
 
-          <li class="d-1"><img src="img/lenguages/html-5.png" alt="HTML" class="d-inline-block align-text-top"
+          <li class="d-1"><img src="img/lenguages/html-5.png" alt="HTML" class="d-inline-block align-text-top img-fluid"
               data-url="https://developer.mozilla.org/es/docs/Web/HTML" data-year="3"></li>
-          <li class="d-1"><img src="img/lenguages/css-3.png" alt="CSS3" class="d-inline-block align-text-top"
+          <li class="d-1"><img src="img/lenguages/css-3.png" alt="CSS3" class="d-inline-block align-text-top img-fluid"
               data-url="https://developer.mozilla.org/es/docs/Web/CSS" data-year="3"></li>
-          <li class="d-1"><img src="img/lenguages/js.png" alt="JAVASCRIPT" class="d-inline-block align-text-top"
+          <li class="d-1"><img src="img/lenguages/js.png" alt="JAVASCRIPT" class="d-inline-block align-text-top img-fluid"
               data-url="https://www.javascript.com/" data-year="2"></li>
           
           </ul>
 
         <ul class="d-flex flex-row justify-content-around mb-4">
 
-          <li class="d-1"><img src="img/lenguages/REACT.png" alt="REACT" class="d-inline-block align-text-top"
+          <li class="d-1"><img src="img/lenguages/REACT.png" alt="REACT" class="d-inline-block align-text-top img-fluid"
               data-url="https://reactjs.org/" data-year="-1"></li>
           <li class="d-1"><img src="img/lenguages/bootstrap.svg" alt="BOOTSTRAP" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://getbootstrap.com/" data-year="2"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://getbootstrap.com/" data-year="2"></li>
           <li class="d-1"><img src="img/lenguages/materialize.svg" alt="MATERIALIZE" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://materializecss.com/" data-year="-1"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://materializecss.com/" data-year="-1"></li>
           
           </ul>
 
         <ul class="d-flex flex-row justify-content-around mb-4">
 
           <li class="d-1"><img src="img/lenguages/sql-server.png" alt="SQL SERVER" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://www.microsoft.com/es-es/sql-server/application-development"
+              class="d-inline-block align-text-top img-fluid" data-url="https://www.microsoft.com/es-es/sql-server/application-development"
               data-year="-1"></li>
           <li class="d-1"><img src="img/lenguages/mysql.png" alt="MYSQL" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://www.mysql.com/" data-year="2"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://www.mysql.com/" data-year="2"></li>
           <li class="d-1"><img src="img/lenguages/mongodb-original-wordmark.svg" alt="MONGODB" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://www.mongodb.com/es" data-year="-1"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://www.mongodb.com/es" data-year="-1"></li>
 
         </ul>
 
         <ul class="d-flex flex-row justify-content-around mb-4">
 
           <li class="d-1"><img src="img/lenguages/file-type-apache.svg" alt="APACHE" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://www.apache.org/" data-year="+1"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://www.apache.org/" data-year="+1"></li>
           <li class="d-1"><img src="img/lenguages/icons8-nodejs.svg" alt="NODEJS" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://nodejs.org/es/" data-year="1"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://nodejs.org/es/" data-year="1"></li>
           <li class="d-1"><img src="img/lenguages/apache-tomcat.svg" alt="APACHE TOMCAT" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://tomcat.apache.org/" data-year="1"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://tomcat.apache.org/" data-year="1"></li>
           
           </ul>
 
         <ul class="d-flex flex-row justify-content-around mb-4">
 
           <li class="d-1"><img src="img/lenguages/json.svg" alt="JSON" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://www.json.org/json-es.html" data-year="1"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://www.json.org/json-es.html" data-year="1"></li>
           <li class="d-1"><img src="img/lenguages/postman.svg" alt="POSTMAN" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://www.postman.com/" data-year="1"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://www.postman.com/" data-year="1"></li>
           <li class="d-1"><img src="img/lenguages/file-type-swagger.svg" alt="SWAGGER" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://swagger.io/" data-year="1"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://swagger.io/" data-year="1"></li>
           
           </ul>
 
         <ul class="d-flex flex-row justify-content-around mb-4">
 
           <li class="d-1"><img src="img/lenguages/icons8-github.svg" alt="GITHUB" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://github.com/" data-year="2"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://github.com/" data-year="2"></li>
           <li class="d-1"><img src="img/lenguages/gitlab.svg" alt="GITLAB" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://about.gitlab.com/" data-year="1"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://about.gitlab.com/" data-year="1"></li>
           <li class="d-1"><img src="img/lenguages/gitea.svg" alt="GITEA" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://gitea.io/en-us/" data-year="-1"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://gitea.io/en-us/" data-year="-1"></li>
           
           </ul>
 
         <ul class="d-flex flex-row justify-content-around mb-4">
 
           <li class="d-1"><img src="img/lenguages/windows.svg" alt="WINDOWS" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://www.microsoft.com/es-es/windows?r=1"
+              class="d-inline-block align-text-top img-fluid" data-url="https://www.microsoft.com/es-es/windows?r=1"
               data-year="A L L L I F E"></li>
           <li class="d-1"><img src="img/lenguages/linux.svg" alt="LINUX" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://www.linux.org/" data-year="+1"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://www.linux.org/" data-year="+1"></li>
           <li class="d-1"><img src="img/lenguages/vmware.svg" alt="VMWARE" width="64" height="64"
-              class="d-inline-block align-text-top" data-url="https://www.vmware.com/ar.html" data-year="1"></li>
+              class="d-inline-block align-text-top img-fluid" data-url="https://www.vmware.com/ar.html" data-year="1"></li>
           
           </ul>
 
       </div>
       </div>
 
-    <div class="window" id="window-internet-explorer">
+    <div class="window" id="window-internet-explorer" onmousemove="moveElementWithMouse(this)"
+      onclick="putElementInFront(this)">
       <div class="title-bar">
         <div class="title-bar-text d-flex flex-row align-items-center"><img src="ico/Webpage.ico" alt="" width="16" height="16"
             class="d-inline-block align-text-top icon-button"> Google - Microsoft Internet Explorer</div>
@@ -334,7 +341,7 @@ Just patience if you find some bug, is a beta version...
                   <ul>
                   <li><a class="dropdown-item d-flex align-items-center" id="btn-technologies"
                       onclick="openWindow('#window-technologies', '#btn-taskbar-technologies')"> <img src="ico/EXE File.ico" alt=""
-                        width="30" height="24" class="d-inline-block align-text-top icon-button"> <span
+                        width="30" height="24" class="d-inline-block align-text-top icon-button "> <span
                         class="text-icon-button">Technologies</span></a></li>
                   <li><a class="dropdown-item d-flex align-items-center" id="btn-education"
                       onclick="openWindow('#window-education', '#btn-taskbar-education')"> <img src="ico/EXE File.ico" alt="" width="30"
@@ -437,16 +444,6 @@ Just patience if you find some bug, is a beta version...
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="js/portfolio.js"></script>
-
-  <script>
-      moveElementWithMouse('window');
-      moveElementWithMouse('window-about-me');
-      moveElementWithMouse('window-technologies');
-      moveElementWithMouse('window-experience');
-      moveElementWithMouse('window-education');
-      moveElementWithMouse('window-internet-explorer');
-      moveElementWithMouse('window-technologie-info');
-    </script>
 
 </body>
 
