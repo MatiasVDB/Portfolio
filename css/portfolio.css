@@ -5,14 +5,14 @@
 html,
 body {
     min-height: 100vh !important;
-        height: 100vh;
+    height: 100vh;
 }
 
 body {
     background-color: #008080;
     font-family: "Pixelated MS Sans Serif", Arial;
     font-size: 11px;
-
+    
 }
 
 textarea {
@@ -20,27 +20,31 @@ textarea {
     font-size: 1.3em;
     text-align: start;
     font-family: 'Courier New', Courier, monospace;
-    /* height: auto; */
     border: none;
     overflow: scroll;
     outline: none;
     resize: none;
-        /*remove the resize handle on the bottom right*/
+    
 }
 
 #window {
+
     top: 15%;
     left: 0%;
     right: 52%;
+    margin: auto;
     transform: none;
 }
+
 
 #window-about-me {
     top: 15%;
     left: 0%;
     left: 52%;
+    margin: auto;
     transform: none;
 }
+
 
 
 .window {
@@ -51,7 +55,7 @@ textarea {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
-    max-height: 98.2vh;
+    
 }
 
 .dropdown-menu #btn-technologies {

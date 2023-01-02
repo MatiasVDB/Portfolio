@@ -2,9 +2,13 @@ const HASHTAG = '#';
 const WINDOW = 'window';
 const ABOUT_ME = 'window-about-me';
 const INTERNET_EXPLORER = 'window-internet-explorer';
+var screenHeight = $(document).height();
+var taskbarHeight = parseInt($("footer").css("height"));
 let savedPositionTop = '';
 let savedPositionLeft = '';
 let idBtnRestore = '';
+let mousePosition;
+let offset = [0, 0];
 
 function openWindow(idWindow, idButtonFromTaskbarToShow) {
 
@@ -40,10 +44,16 @@ function selectorSizeWindow(window, e) {
 function maximizeWindow(window, obj) {
 
   idBtnRestore = obj;
+
+  if ($(HASHTAG + window).hasClass("restored")) {
+
+    $(HASHTAG + window).removeClass("restored");
+  }
+
   savedPositionTop = $(HASHTAG + window).css("top");
   savedPositionLeft = $(HASHTAG + window).css("left");
 
-  $(obj).attr('aria-label', "Restore");
+  $(idBtnRestore).attr('aria-label', "Restore");
 
   $(HASHTAG + window).css("width", "100%");
 
@@ -56,23 +66,23 @@ function maximizeWindow(window, obj) {
   $(HASHTAG + window).css("transform", "none");
 
   switch (window) {
-    case WINDOW:
-      $("#photo").css("width", "60em");
-      $("#photo").css("height", "90.5vh");
-      break;
+
     case ABOUT_ME:
-      $("textarea").css("height", "85.5vh");
+      $("textarea").css("height", (screenHeight - taskbarHeight - 100) + "px");
+      $(HASHTAG + window).css("height", (screenHeight - taskbarHeight) + "px");
       break;
     case INTERNET_EXPLORER:
-      $("iframe").css("height", "90vh");
+      $("iframe").css("height", (screenHeight - taskbarHeight) + "px");
       break;
 
     default:
-      $(HASHTAG + window).css("height", "95.2vh");
+      $(HASHTAG + window).css("height", (screenHeight - taskbarHeight) + "px");
   }
 }
 
 function restoreWindow(window, obj) {
+
+  $(HASHTAG + window).addClass("restored");
 
   $(obj).attr('aria-label', 'Maximize');
 
@@ -82,17 +92,10 @@ function restoreWindow(window, obj) {
 
   $(HASHTAG + window).css("left", savedPositionLeft);
 
-  $(HASHTAG + window).css("transform", "translate(-50%, -50%)");
-
   switch (window) {
-    case WINDOW:
-      $("#photo").css("width", "400px");
-      $("#photo").css("height", "auto");
-      $(HASHTAG + window).css("transform", "none");
-      break;
     case ABOUT_ME:
       $("textarea").css("height", "auto");
-      $(HASHTAG + window).css("transform", "none");
+      $(HASHTAG + window).css("height", "auto");
       break;
     case INTERNET_EXPLORER:
       $("iframe").css("height", "500px");
@@ -136,8 +139,6 @@ function putElementInFront(obj) {
   let counter = 1;
   windows = document.getElementsByClassName('window');
 
- 
-  
   for (var i = 0, il = windows.length; i < il; i++) {
     windows[i].style.zIndex = 0;
   }
@@ -147,17 +148,7 @@ function putElementInFront(obj) {
     
     $("#window-technologie-info").css('z-index', 3);
 
-    // if ($("#window-technologie-info").hasClass("showed")) {
-
-    //   console.log("boke");
-
-    // $("#window-technologies").css('z-index', 1);
-
-    //   $("#window-technologie-info").css('z-index', ++counter);
-
-    // }
-
-}
+  }
 
   else {
 
@@ -169,55 +160,21 @@ function putElementInFront(obj) {
 
 function moveElementWithMouse(obj) {
 
-  let mousePosition;
-  let offset = [0, 0];
-  let elementToMove;
-  let isDown = false;
-  elementToMove = obj;
-  windows = document.getElementsByClassName('window');
+  putElementInFront(obj);
+  const element = $(obj).find("[aria-label='Maximize']")[0];
 
-  $(HASHTAG + $(obj).attr('id') + '> .title-bar').mousedown(function (e) {
+  $(obj).draggable({ containment: "body", scroll: false }, { handle: ".title-bar" },
+    { scroll: true, scrollSensitivity: 100 },
+    { cancel: ".window-body, #notepad-navbar, .window.title-bar" }, {
+    start: function () {
+      if (!$(obj).hasClass("restored")) {
 
-    putElementInFront(elementToMove);
+        restoreWindow(obj.id, element);
+      }
 
-    isDown = true;
-    offset = [
-      elementToMove.offsetLeft - e.clientX,
-      elementToMove.offsetTop - e.clientY
-    ];
-
+      }
   });
-
-  document.addEventListener('mouseup', function () {
-    isDown = false;
-  }, true);
-
-  document.addEventListener('mousemove', function (event) {
-    event.preventDefault();
-
-    if (isDown) {
-
-      if ($(idBtnRestore).attr('aria-label') === 'Restore') {
-
-        if ($(obj).attr('id') !== 'window-technologie-info') {
-
-          restoreWindow($(obj).attr('id'), idBtnRestore);
-
-        }
-      }   
-      mousePosition = {
-
-        x: event.clientX,
-        y: event.clientY
-
-      };
-
-      elementToMove.style.left = (mousePosition.x + offset[0]) + 'px';
-      elementToMove.style.top = (mousePosition.y + offset[1]) + 'px';
-
-    }
-
-  }, true);
+  $(".title-bar").disableSelection();
 
 }
 

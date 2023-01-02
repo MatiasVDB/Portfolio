@@ -11,15 +11,15 @@
   <title>Matias Van Der Beken | Portfolio </title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/portfolio.css">
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/portfolio.css">
   <link rel="icon" type="image/x-icon" href="./ico/windows.ico">
 </head>
 
 <body onload="startTime()">
-  <section>
+  <section id="container">
     <div class="container-fluid">
-      <div class="window mx-auto showed" id="window" onmousemove="moveElementWithMouse(this);"
-        onclick="putElementInFront(this)">
+      <div class="window mx-auto showed" id="window" onmouseenter="moveElementWithMouse(this)">
         <div class="title-bar">
           <div class="title-bar-text d-flex flex-row align-items-center"><img src="ico/JPG File.ico" alt="" width="16" height="16"
               class="d-inline-block align-text-top icon-button"> Me.jpeg</div>
@@ -35,8 +35,7 @@
             </div>
             </div>
 
-      <div class="window mx-auto showed" id="window-about-me" onmousemove="moveElementWithMouse(this)"
-        onclick="putElementInFront(this)">
+      <div class="window mx-auto showed" id="window-about-me" onmouseenter="moveElementWithMouse(this)">
         <div class="title-bar">
           <div class="title-bar-text d-flex flex-row align-items-center"> <img src="ico/Notepad.ico" alt="" width="16" height="16"
               class="d-inline-block align-text-top icon-button"> About me - Notepad</div>
@@ -47,7 +46,7 @@
               onclick="closeWindow('#window-about-me', '#btn-taskbar-about-me')"></button>
             </div>
             </div>
-        <div class="d-flex flex-row align-items-center ms-1">
+        <div class="d-flex flex-row align-items-center ms-1" id="notepad-navbar">
           <p class="notepad-navbar-elements">File</p>
           <p class="notepad-navbar-elements">Edit</p>
           <p class="notepad-navbar-elements">Search</p>
@@ -70,7 +69,7 @@ Just patience if you find some bug, is a beta version...
           </div>
           </div>
           
-          <div class="window" id="window-education" onmousemove="moveElementWithMouse(this)" onclick="putElementInFront(this)" ;>
+          <div class="window" id="window-education" onmouseenter="moveElementWithMouse(this)" ;>
             <div class="title-bar">
         <div class="title-bar-text d-flex flex-row align-items-center"> <img src="ico/EXE File.ico" alt="" width="16"
             height="16" class="d-inline-block align-text-top icon-button"> Education.exe</div>
@@ -117,7 +116,7 @@ Just patience if you find some bug, is a beta version...
           </div>
           </div>
 
-    <div class="window" id="window-experience" onmousemove="moveElementWithMouse(this)" onclick="putElementInFront(this)">
+    <div class="window" id="window-experience" onmouseenter="moveElementWithMouse(this)">
       <div class="title-bar">
         <div class="title-bar-text d-flex flex-row align-items-center"> <img src="ico/EXE File.ico" alt="" width="16"
             height="16" class="d-inline-block align-text-top icon-button"> Experience.exe</div>
@@ -162,7 +161,7 @@ Just patience if you find some bug, is a beta version...
           </div>
           </div>
 
-    <div class="window" style="width: 300px" id="window-technologie-info" onmousemove="moveElementWithMouse(this)">
+    <div class="window" style="width: 300px" id="window-technologie-info" onmouseenter="moveElementWithMouse(this)">
       <div class="title-bar">
         <div class="title-bar-text">Experience</div>
         <div class="title-bar-controls">
@@ -177,7 +176,7 @@ Just patience if you find some bug, is a beta version...
           </div>
       </div>
 
-    <div class="window" id="window-technologies" onmousemove="moveElementWithMouse(this)" onclick="putElementInFront(this)">
+    <div class="window" id="window-technologies" onmouseenter="moveElementWithMouse(this)">
       <div class="title-bar">
         <div class="title-bar-text d-flex flex-row align-items-center"><img src="ico/EXE File.ico" alt="" width="16" height="16"
             class="d-inline-block align-text-top icon-button"> Technologies.exe</div>
@@ -298,8 +297,8 @@ Just patience if you find some bug, is a beta version...
       </div>
       </div>
 
-    <div class="window" id="window-internet-explorer" onmousemove="moveElementWithMouse(this)"
-      onclick="putElementInFront(this)">
+    <div class="window" id="window-internet-explorer" onmouseenter="moveElementWithMouse(this)"
+      onclick="alert('Soltaste el mouse')">
       <div class="title-bar">
         <div class="title-bar-text d-flex flex-row align-items-center"><img src="ico/Webpage.ico" alt="" width="16" height="16"
             class="d-inline-block align-text-top icon-button"> Google - Microsoft Internet Explorer</div>
@@ -444,7 +443,6 @@ Just patience if you find some bug, is a beta version...
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="js/portfolio.js"></script>
-
 </body>
 
 </html>
