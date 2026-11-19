@@ -26,11 +26,6 @@
                 <span>Me.jpeg</span>
             </div>
 
-            <div class="desktop-icon" tabindex="0" data-open-window="window-projects">
-                <img src="ico/Briefcase.ico" alt="My Projects" />
-                <span>Projects.exe</span>
-            </div>
-
             <div class="desktop-icon" tabindex="0" data-open-window="window-experience">
                 <img src="ico/My Computer.ico" alt="Experience" />
                 <span>Experience.exe</span>
@@ -49,11 +44,6 @@
             <div class="desktop-icon" tabindex="0" data-open-window="window-internet-explorer">
                 <img src="ico/Internet Explorer.ico" alt="Internet Explorer" />
                 <span>Internet Explorer</span>
-            </div>
-
-            <div class="desktop-icon" tabindex="0" data-external-url="https://github.com/MatiasVDB">
-                <img src="ico/Network Neighbourhood.ico" alt="GitHub" />
-                <span>GitHub</span>
             </div>
         </div>
 
@@ -83,7 +73,8 @@
         </section>
 
         <!-- WINDOW: About me - Notepad (Open by default) -->
-        <section class="window" id="window-about-me" data-window data-title="About me - Notepad" data-icon="ico/Notepad.ico">
+        <section class="window" id="window-about-me" data-window data-title="About me - Notepad"
+            data-icon="ico/Notepad.ico">
             <div class="title-bar">
                 <div class="title-bar-text">
                     <img src="ico/Notepad.ico" alt="" />
@@ -97,13 +88,13 @@
                 </div>
             </div>
             <div class="window-menubar">
-                <span data-action-open="window-projects">File</span>
                 <span data-action-open="window-experience">Experience</span>
                 <span data-action-open="window-technologies">Technologies</span>
                 <span data-action-open="window-education">Help</span>
             </div>
             <div class="window-body">
-                <textarea class="notepad-textarea" rows="10" spellcheck="false" aria-label="About me text">Hi! I'm Matias, a passionate Software Developer from Argentina.
+                <textarea class="notepad-textarea" rows="10" spellcheck="false"
+                    aria-label="About me text">Hi! I'm Matias, a passionate Software Developer from Argentina.
 I started studying programming in 2019, and today I build robust solutions as a professional developer 😎.
 
 My core strength is Back-End architecture & APIs, though I enjoy working across the Full-Stack — this interactive Windows 98 desktop portfolio is a tribute to classic computing built with pure Vanilla JS (ES Modules) and 98.css!
@@ -116,7 +107,9 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
                             <img src="img/lenguages/icons8-github.svg" alt="GitHub" />
                             <span>GitHub</span>
                         </a>
-                        <a class="win98-btn-link" href="https://www.linkedin.com/in/matias-ezequiel-van-der-beken-23b1bb165/" target="_blank" rel="noopener">
+                        <a class="win98-btn-link"
+                            href="https://www.linkedin.com/in/matias-ezequiel-van-der-beken-23b1bb165/" target="_blank"
+                            rel="noopener">
                             <img src="img/icons8-linkedin.svg" alt="LinkedIn" />
                             <span>LinkedIn</span>
                         </a>
@@ -125,7 +118,6 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
                             <span>Contact Email</span>
                         </a>
                     </div>
-                    <button type="button" data-action-open="window-projects">Ver Proyectos...</button>
                 </div>
             </div>
             <div class="status-bar window-status-bar">
@@ -134,105 +126,9 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
             </div>
         </section>
 
-        <!-- WINDOW: Projects.exe -->
-        <section class="window is-hidden" id="window-projects" data-window data-title="Projects.exe" data-icon="ico/Briefcase.ico">
-            <div class="title-bar">
-                <div class="title-bar-text">
-                    <img src="ico/Briefcase.ico" alt="" />
-                    <span>Projects.exe - Portfolio Showcase</span>
-                </div>
-                <div class="title-bar-controls">
-                    <button aria-label="Minimize"></button>
-                    <button aria-label="Maximize"></button>
-                    <button aria-label="Restore" style="display: none"></button>
-                    <button aria-label="Close"></button>
-                </div>
-            </div>
-            <div class="window-body">
-                <div class="sunken-panel">
-                    <div class="projects-grid">
-                        <article class="project-card">
-                            <div>
-                                <div class="project-card-header">
-                                    <img src="ico/windows.ico" alt="" />
-                                    <div class="project-card-title">Windows 98 Interactive Portfolio</div>
-                                </div>
-                                <p class="project-card-desc" style="margin-top: 6px;">
-                                    Réplica interactiva del escritorio de Windows 98 con gestor de ventanas propio en Vanilla JS (ES Modules), soporte táctil, barra de tareas dinámica y 98.css.
-                                </p>
-                            </div>
-                            <div>
-                                <div class="project-tags">
-                                    <span class="project-tag">JavaScript ES6+</span>
-                                    <span class="project-tag">98.css</span>
-                                    <span class="project-tag">HTML5 / CSS3</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a class="win98-btn-link" href="https://github.com/MatiasVDB/Portfolio" target="_blank" rel="noopener">
-                                        <img src="img/lenguages/icons8-github.svg" alt="" />
-                                        <span>Repositorio</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="project-card">
-                            <div>
-                                <div class="project-card-header">
-                                    <img src="ico/Server.ico" alt="" />
-                                    <div class="project-card-title">Sistemas & APIs Back-End (CONICET)</div>
-                                </div>
-                                <p class="project-card-desc" style="margin-top: 6px;">
-                                    Desarrollo, mantenimiento e integración de servicios Back-End, bases de datos relacionales y APIs RESTful para gestión institucional y científica.
-                                </p>
-                            </div>
-                            <div>
-                                <div class="project-tags">
-                                    <span class="project-tag">Java / Spring</span>
-                                    <span class="project-tag">SQL / MySQL</span>
-                                    <span class="project-tag">REST API</span>
-                                </div>
-                                <div class="project-actions">
-                                    <button type="button" data-action-open="window-experience">Ver Experiencia</button>
-                                </div>
-                            </div>
-                        </article>
-
-                        <article class="project-card">
-                            <div>
-                                <div class="project-card-header">
-                                    <img src="ico/Entire Network.ico" alt="" />
-                                    <div class="project-card-title">Soluciones Full-Stack & Web Apps</div>
-                                </div>
-                                <p class="project-card-desc" style="margin-top: 6px;">
-                                    Aplicaciones web completas integrando motores de base de datos, autenticación, paneles administrativos y arquitecturas MVC modernas.
-                                </p>
-                            </div>
-                            <div>
-                                <div class="project-tags">
-                                    <span class="project-tag">PHP / Laravel</span>
-                                    <span class="project-tag">.NET / C#</span>
-                                    <span class="project-tag">React / Node.js</span>
-                                </div>
-                                <div class="project-actions">
-                                    <a class="win98-btn-link" href="https://github.com/MatiasVDB" target="_blank" rel="noopener">
-                                        <img src="img/lenguages/icons8-github.svg" alt="" />
-                                        <span>Más en GitHub</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-            <div class="status-bar window-status-bar">
-                <p class="status-bar-field">3 objeto(s)</p>
-                <p class="status-bar-field">github.com/MatiasVDB</p>
-            </div>
-        </section>
-
         <!-- WINDOW: Experience.exe -->
-        <section class="window is-hidden" id="window-experience" data-window data-title="Experience.exe" data-icon="ico/My Computer.ico">
+        <section class="window is-hidden" id="window-experience" data-window data-title="Experience.exe"
+            data-icon="ico/My Computer.ico">
             <div class="title-bar">
                 <div class="title-bar-text">
                     <img src="ico/My Computer.ico" alt="" />
@@ -253,9 +149,11 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
                                 <span class="timeline-role">Back-End Developer</span>
                                 <span class="timeline-date">May 2022 - Present</span>
                             </div>
-                            <a class="timeline-org" href="https://www.conicet.gov.ar/" target="_blank" rel="noopener">CONICET</a>
+                            <a class="timeline-org" href="https://www.conicet.gov.ar/" target="_blank"
+                                rel="noopener">CONICET</a>
                             <p class="timeline-desc">
-                                Desarrollo y arquitectura de servicios Back-End, optimización de consultas en bases de datos y diseño de APIs para plataformas internas y sistemas de gestión.
+                                Desarrollo y arquitectura de servicios Back-End, optimización de consultas en bases de
+                                datos y diseño de APIs para plataformas internas y sistemas de gestión.
                             </p>
                         </li>
 
@@ -264,9 +162,11 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
                                 <span class="timeline-role">FullStack Developer</span>
                                 <span class="timeline-date">August 2021 - April 2022</span>
                             </div>
-                            <a class="timeline-org" href="https://www.quantia.com.ar/" target="_blank" rel="noopener">Quantia S.A.</a>
+                            <a class="timeline-org" href="https://www.quantia.com.ar/" target="_blank"
+                                rel="noopener">Quantia S.A.</a>
                             <p class="timeline-desc">
-                                Desarrollo Full-Stack de aplicaciones corporativas, implementación de interfaces web y mantenimiento evolutivo de servicios de negocio.
+                                Desarrollo Full-Stack de aplicaciones corporativas, implementación de interfaces web y
+                                mantenimiento evolutivo de servicios de negocio.
                             </p>
                         </li>
                     </ul>
@@ -279,7 +179,8 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
         </section>
 
         <!-- WINDOW: Education.exe -->
-        <section class="window is-hidden" id="window-education" data-window data-title="Education.exe" data-icon="ico/Wordpad.ico">
+        <section class="window is-hidden" id="window-education" data-window data-title="Education.exe"
+            data-icon="ico/Wordpad.ico">
             <div class="title-bar">
                 <div class="title-bar-text">
                     <img src="ico/Wordpad.ico" alt="" />
@@ -300,9 +201,11 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
                                 <span class="timeline-role">Título Universitario en Desarrollo Web</span>
                                 <span class="timeline-date">April 2019 - June 2022</span>
                             </div>
-                            <a class="timeline-org" href="https://www.unlam.edu.ar/" target="_blank" rel="noopener">Universidad Nacional de La Matanza (UNLaM)</a>
+                            <a class="timeline-org" href="https://www.unlam.edu.ar/" target="_blank"
+                                rel="noopener">Universidad Nacional de La Matanza (UNLaM)</a>
                             <p class="timeline-desc">
-                                Formación universitaria integral en ingeniería de software, programación orientada a objetos, bases de datos, arquitectura web y redes.
+                                Formación universitaria integral en ingeniería de software, programación orientada a
+                                objetos, bases de datos, arquitectura web y redes.
                             </p>
                         </li>
 
@@ -311,7 +214,8 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
                                 <span class="timeline-role">Bachiller en Ciencias Sociales</span>
                                 <span class="timeline-date">March 2009 - December 2014</span>
                             </div>
-                            <a class="timeline-org" href="https://iwmcastelar.com.ar/" target="_blank" rel="noopener">Instituto William Morris de Castelar</a>
+                            <a class="timeline-org" href="https://iwmcastelar.com.ar/" target="_blank"
+                                rel="noopener">Instituto William Morris de Castelar</a>
                             <p class="timeline-desc">
                                 Educación secundaria completa.
                             </p>
@@ -325,7 +229,8 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
         </section>
 
         <!-- WINDOW: Technologies.exe -->
-        <section class="window is-hidden" id="window-technologies" data-window data-title="Technologies.exe" data-icon="ico/Control Panel.ico">
+        <section class="window is-hidden" id="window-technologies" data-window data-title="Technologies.exe"
+            data-icon="ico/Control Panel.ico">
             <div class="title-bar">
                 <div class="title-bar-text">
                     <img src="ico/Control Panel.ico" alt="" />
@@ -344,123 +249,151 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
                     <button type="button" data-tech-filter="Back-End" aria-selected="false">Back-End</button>
                     <button type="button" data-tech-filter="Front-End" aria-selected="false">Front-End</button>
                     <button type="button" data-tech-filter="Databases" aria-selected="false">Bases de Datos</button>
-                    <button type="button" data-tech-filter="DevOps & Tools" aria-selected="false">Herramientas & OS</button>
+                    <button type="button" data-tech-filter="DevOps & Tools" aria-selected="false">Herramientas &
+                        OS</button>
                 </div>
 
                 <div class="sunken-panel">
                     <div class="tech-grid">
                         <!-- Back-End -->
-                        <div class="tech-card" data-name="Java" data-category="Back-End" data-url="https://dev.java/" data-year="2">
+                        <div class="tech-card" data-name="Java" data-category="Back-End" data-url="https://dev.java/"
+                            data-year="2">
                             <img src="img/lenguages/java.png" alt="Java" />
                             <span>Java</span>
                         </div>
-                        <div class="tech-card" data-name="Spring Boot" data-category="Back-End" data-url="https://spring.io/projects/spring-boot/" data-year="1">
+                        <div class="tech-card" data-name="Spring Boot" data-category="Back-End"
+                            data-url="https://spring.io/projects/spring-boot/" data-year="1">
                             <img src="img/lenguages/spring.svg" alt="Spring Boot" />
                             <span>Spring Boot</span>
                         </div>
-                        <div class="tech-card" data-name="PHP" data-category="Back-End" data-url="https://www.php.net/" data-year="+1">
+                        <div class="tech-card" data-name="PHP" data-category="Back-End" data-url="https://www.php.net/"
+                            data-year="+1">
                             <img src="img/lenguages/php.png" alt="PHP" />
                             <span>PHP</span>
                         </div>
-                        <div class="tech-card" data-name="Laravel" data-category="Back-End" data-url="https://laravel.com/" data-year="-1">
+                        <div class="tech-card" data-name="Laravel" data-category="Back-End"
+                            data-url="https://laravel.com/" data-year="-1">
                             <img src="img/lenguages/laravel.svg" alt="Laravel" />
                             <span>Laravel</span>
                         </div>
-                        <div class="tech-card" data-name="C#" data-category="Back-End" data-url="https://learn.microsoft.com/en-us/dotnet/csharp/" data-year="-1">
+                        <div class="tech-card" data-name="C#" data-category="Back-End"
+                            data-url="https://learn.microsoft.com/en-us/dotnet/csharp/" data-year="-1">
                             <img src="img/lenguages/c-sharp.png" alt="C#" />
                             <span>C#</span>
                         </div>
-                        <div class="tech-card" data-name=".NET" data-category="Back-End" data-url="https://dotnet.microsoft.com/" data-year="-1">
+                        <div class="tech-card" data-name=".NET" data-category="Back-End"
+                            data-url="https://dotnet.microsoft.com/" data-year="-1">
                             <img src="img/lenguages/dot-net-original-wordmark.svg" alt=".NET" />
                             <span>.NET</span>
                         </div>
-                        <div class="tech-card" data-name="Node.js" data-category="Back-End" data-url="https://nodejs.org/" data-year="1">
+                        <div class="tech-card" data-name="Node.js" data-category="Back-End"
+                            data-url="https://nodejs.org/" data-year="1">
                             <img src="img/lenguages/icons8-nodejs.svg" alt="Node.js" />
                             <span>Node.js</span>
                         </div>
 
                         <!-- Front-End -->
-                        <div class="tech-card" data-name="HTML5" data-category="Front-End" data-url="https://developer.mozilla.org/es/docs/Web/HTML" data-year="3">
+                        <div class="tech-card" data-name="HTML5" data-category="Front-End"
+                            data-url="https://developer.mozilla.org/es/docs/Web/HTML" data-year="3">
                             <img src="img/lenguages/html-5.png" alt="HTML5" />
                             <span>HTML5</span>
                         </div>
-                        <div class="tech-card" data-name="CSS3" data-category="Front-End" data-url="https://developer.mozilla.org/es/docs/Web/CSS" data-year="3">
+                        <div class="tech-card" data-name="CSS3" data-category="Front-End"
+                            data-url="https://developer.mozilla.org/es/docs/Web/CSS" data-year="3">
                             <img src="img/lenguages/css-3.png" alt="CSS3" />
                             <span>CSS3</span>
                         </div>
-                        <div class="tech-card" data-name="JavaScript" data-category="Front-End" data-url="https://developer.mozilla.org/es/docs/Web/JavaScript" data-year="2">
+                        <div class="tech-card" data-name="JavaScript" data-category="Front-End"
+                            data-url="https://developer.mozilla.org/es/docs/Web/JavaScript" data-year="2">
                             <img src="img/lenguages/js.png" alt="JavaScript" />
                             <span>JavaScript</span>
                         </div>
-                        <div class="tech-card" data-name="React" data-category="Front-End" data-url="https://react.dev/" data-year="-1">
+                        <div class="tech-card" data-name="React" data-category="Front-End" data-url="https://react.dev/"
+                            data-year="-1">
                             <img src="img/lenguages/REACT.png" alt="React" />
                             <span>React</span>
                         </div>
-                        <div class="tech-card" data-name="Bootstrap" data-category="Front-End" data-url="https://getbootstrap.com/" data-year="2">
+                        <div class="tech-card" data-name="Bootstrap" data-category="Front-End"
+                            data-url="https://getbootstrap.com/" data-year="2">
                             <img src="img/lenguages/bootstrap.svg" alt="Bootstrap" />
                             <span>Bootstrap</span>
                         </div>
-                        <div class="tech-card" data-name="Materialize" data-category="Front-End" data-url="https://materializecss.com/" data-year="-1">
+                        <div class="tech-card" data-name="Materialize" data-category="Front-End"
+                            data-url="https://materializecss.com/" data-year="-1">
                             <img src="img/lenguages/materialize.svg" alt="Materialize" />
                             <span>Materialize</span>
                         </div>
 
                         <!-- Databases -->
-                        <div class="tech-card" data-name="MySQL" data-category="Databases" data-url="https://www.mysql.com/" data-year="2">
+                        <div class="tech-card" data-name="MySQL" data-category="Databases"
+                            data-url="https://www.mysql.com/" data-year="2">
                             <img src="img/lenguages/mysql.png" alt="MySQL" />
                             <span>MySQL</span>
                         </div>
-                        <div class="tech-card" data-name="SQL Server" data-category="Databases" data-url="https://www.microsoft.com/sql-server" data-year="-1">
+                        <div class="tech-card" data-name="SQL Server" data-category="Databases"
+                            data-url="https://www.microsoft.com/sql-server" data-year="-1">
                             <img src="img/lenguages/sql-server.png" alt="SQL Server" />
                             <span>SQL Server</span>
                         </div>
-                        <div class="tech-card" data-name="MongoDB" data-category="Databases" data-url="https://www.mongodb.com/" data-year="-1">
+                        <div class="tech-card" data-name="MongoDB" data-category="Databases"
+                            data-url="https://www.mongodb.com/" data-year="-1">
                             <img src="img/lenguages/mongodb-original-wordmark.svg" alt="MongoDB" />
                             <span>MongoDB</span>
                         </div>
 
                         <!-- DevOps & Tools -->
-                        <div class="tech-card" data-name="Apache" data-category="DevOps & Tools" data-url="https://www.apache.org/" data-year="+1">
+                        <div class="tech-card" data-name="Apache" data-category="DevOps & Tools"
+                            data-url="https://www.apache.org/" data-year="+1">
                             <img src="img/lenguages/file-type-apache.svg" alt="Apache" />
                             <span>Apache</span>
                         </div>
-                        <div class="tech-card" data-name="Apache Tomcat" data-category="DevOps & Tools" data-url="https://tomcat.apache.org/" data-year="1">
+                        <div class="tech-card" data-name="Apache Tomcat" data-category="DevOps & Tools"
+                            data-url="https://tomcat.apache.org/" data-year="1">
                             <img src="img/lenguages/apache-tomcat.svg" alt="Tomcat" />
                             <span>Tomcat</span>
                         </div>
-                        <div class="tech-card" data-name="JSON" data-category="DevOps & Tools" data-url="https://www.json.org/" data-year="1">
+                        <div class="tech-card" data-name="JSON" data-category="DevOps & Tools"
+                            data-url="https://www.json.org/" data-year="1">
                             <img src="img/lenguages/json.svg" alt="JSON" />
                             <span>JSON</span>
                         </div>
-                        <div class="tech-card" data-name="Postman" data-category="DevOps & Tools" data-url="https://www.postman.com/" data-year="1">
+                        <div class="tech-card" data-name="Postman" data-category="DevOps & Tools"
+                            data-url="https://www.postman.com/" data-year="1">
                             <img src="img/lenguages/postman.svg" alt="Postman" />
                             <span>Postman</span>
                         </div>
-                        <div class="tech-card" data-name="Swagger" data-category="DevOps & Tools" data-url="https://swagger.io/" data-year="1">
+                        <div class="tech-card" data-name="Swagger" data-category="DevOps & Tools"
+                            data-url="https://swagger.io/" data-year="1">
                             <img src="img/lenguages/file-type-swagger.svg" alt="Swagger" />
                             <span>Swagger</span>
                         </div>
-                        <div class="tech-card" data-name="GitHub" data-category="DevOps & Tools" data-url="https://github.com/" data-year="2">
+                        <div class="tech-card" data-name="GitHub" data-category="DevOps & Tools"
+                            data-url="https://github.com/" data-year="2">
                             <img src="img/lenguages/icons8-github.svg" alt="GitHub" />
                             <span>GitHub</span>
                         </div>
-                        <div class="tech-card" data-name="GitLab" data-category="DevOps & Tools" data-url="https://about.gitlab.com/" data-year="1">
+                        <div class="tech-card" data-name="GitLab" data-category="DevOps & Tools"
+                            data-url="https://about.gitlab.com/" data-year="1">
                             <img src="img/lenguages/gitlab.svg" alt="GitLab" />
                             <span>GitLab</span>
                         </div>
-                        <div class="tech-card" data-name="Gitea" data-category="DevOps & Tools" data-url="https://gitea.io/" data-year="-1">
+                        <div class="tech-card" data-name="Gitea" data-category="DevOps & Tools"
+                            data-url="https://gitea.io/" data-year="-1">
                             <img src="img/lenguages/gitea.svg" alt="Gitea" />
                             <span>Gitea</span>
                         </div>
-                        <div class="tech-card" data-name="Windows" data-category="DevOps & Tools" data-url="https://www.microsoft.com/windows" data-year="ALL LIFE">
+                        <div class="tech-card" data-name="Windows" data-category="DevOps & Tools"
+                            data-url="https://www.microsoft.com/windows" data-year="ALL LIFE">
                             <img src="img/lenguages/windows.svg" alt="Windows" />
                             <span>Windows</span>
                         </div>
-                        <div class="tech-card" data-name="Linux" data-category="DevOps & Tools" data-url="https://www.linux.org/" data-year="+1">
+                        <div class="tech-card" data-name="Linux" data-category="DevOps & Tools"
+                            data-url="https://www.linux.org/" data-year="+1">
                             <img src="img/lenguages/linux.svg" alt="Linux" />
                             <span>Linux</span>
                         </div>
-                        <div class="tech-card" data-name="VMware" data-category="DevOps & Tools" data-url="https://www.vmware.com/" data-year="1">
+                        <div class="tech-card" data-name="VMware" data-category="DevOps & Tools"
+                            data-url="https://www.vmware.com/" data-year="1">
                             <img src="img/lenguages/vmware.svg" alt="VMware" />
                             <span>VMware</span>
                         </div>
@@ -473,7 +406,8 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
         </section>
 
         <!-- WINDOW: Technology Details Dialog -->
-        <section class="window is-hidden" id="window-tech-info" data-window data-title="Technology Properties" data-icon="ico/System(1).ico" data-no-taskbar="true">
+        <section class="window is-hidden" id="window-tech-info" data-window data-title="Technology Properties"
+            data-icon="ico/System(1).ico" data-no-taskbar="true">
             <div class="title-bar">
                 <div class="title-bar-text">
                     <img src="ico/System(1).ico" alt="" />
@@ -495,7 +429,8 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
                             <div id="tech-info-category">Back-End</div>
                             <div class="tech-info-badge" id="tech-info-years">2 años de experiencia</div>
                             <div style="margin-top: 6px;">
-                                <a id="tech-info-link" class="win98-btn-link" href="https://dev.java/" target="_blank" rel="noopener">
+                                <a id="tech-info-link" class="win98-btn-link" href="https://dev.java/" target="_blank"
+                                    rel="noopener">
                                     <span>Sitio Oficial ↗</span>
                                 </a>
                             </div>
@@ -506,7 +441,8 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
         </section>
 
         <!-- WINDOW: Internet Explorer -->
-        <section class="window is-hidden" id="window-internet-explorer" data-window data-title="Google - Microsoft Internet Explorer" data-icon="ico/Webpage.ico">
+        <section class="window is-hidden" id="window-internet-explorer" data-window
+            data-title="Google - Microsoft Internet Explorer" data-icon="ico/Webpage.ico">
             <div class="title-bar">
                 <div class="title-bar-text">
                     <img src="ico/Webpage.ico" alt="" />
@@ -538,7 +474,8 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
         </section>
 
         <!-- WINDOW: Shut Down Windows Dialog -->
-        <section class="window is-hidden" id="window-shutdown" data-window data-title="Shut Down Windows" data-icon="ico/shut_down_with_computer.ico" data-no-taskbar="true">
+        <section class="window is-hidden" id="window-shutdown" data-window data-title="Shut Down Windows"
+            data-icon="ico/shut_down_with_computer.ico" data-no-taskbar="true">
             <div class="title-bar">
                 <div class="title-bar-text">
                     <span>Shut Down Windows</span>
@@ -549,7 +486,8 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
             </div>
             <div class="window-body">
                 <div style="display: flex; gap: 14px; align-items: flex-start; padding: 6px 4px;">
-                    <img src="ico/shut_down_with_computer.ico" alt="Shut Down" width="32" height="32" style="image-rendering: pixelated;" />
+                    <img src="ico/shut_down_with_computer.ico" alt="Shut Down" width="32" height="32"
+                        style="image-rendering: pixelated;" />
                     <div style="display: flex; flex-direction: column; gap: 8px;">
                         <p style="font-weight: bold;">What do you want the computer to do?</p>
                         <div class="field-row">
@@ -576,12 +514,6 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
             <p class="start-menu-sidebar-text"><b>Windows</b>98</p>
         </div>
         <ul class="start-menu-items">
-            <li>
-                <a class="start-menu-item" data-action-open="window-projects">
-                    <img src="ico/Briefcase.ico" alt="" />
-                    <span>Projects</span>
-                </a>
-            </li>
             <li>
                 <a class="start-menu-item" data-action-open="window-technologies">
                     <img src="ico/Control Panel.ico" alt="" />
@@ -645,14 +577,13 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
         <div class="taskbar-handle"></div>
 
         <div class="quick-launch" aria-label="Quick Launch">
-            <button type="button" class="quick-launch-btn" id="btn-show-desktop" title="Mostrar escritorio (Minimizar todo)">
+            <button type="button" class="quick-launch-btn" id="btn-show-desktop"
+                title="Mostrar escritorio (Minimizar todo)">
                 <img src="ico/desktop.ico" alt="Show Desktop" />
             </button>
-            <button type="button" class="quick-launch-btn" data-action-open="window-internet-explorer" title="Abrir Internet Explorer">
+            <button type="button" class="quick-launch-btn" data-action-open="window-internet-explorer"
+                title="Abrir Internet Explorer">
                 <img src="ico/Internet Explorer.ico" alt="Internet Explorer" />
-            </button>
-            <button type="button" class="quick-launch-btn" data-action-open="window-projects" title="Ver Proyectos">
-                <img src="ico/Briefcase.ico" alt="Projects" />
             </button>
         </div>
 
@@ -671,7 +602,8 @@ Feel free to double-click the desktop icons, drag windows around, or use the Sta
     <!-- RETRO SHUTDOWN OVERLAY -->
     <div id="shutdown-screen">
         <p style="font-size: 26px; font-weight: bold; margin-bottom: 16px;">It's now safe to turn off your computer.</p>
-        <p style="color: #ccc; font-size: 14px;">(Hacé clic en cualquier lugar o presioná una tecla para volver a Windows 98)</p>
+        <p style="color: #ccc; font-size: 14px;">(Hacé clic en cualquier lugar o presioná una tecla para volver a
+            Windows 98)</p>
     </div>
 </body>
 
